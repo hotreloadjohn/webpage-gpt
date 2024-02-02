@@ -237,3 +237,16 @@ article h3 {
 .nav-active {
     display: flex;
 }
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center; /* Center-align the testimonials for aesthetic balance */
+    }
+
+    .testimonial {
+        flex-basis: 100%; /* Each testimonial takes full width of the container */
+        max-width: 90%; /* Optional: Restrict max-width to improve readability on very wide screens */
+        margin-bottom: 20px; /* Add some space between stacked testimonials */
+    }
+}
