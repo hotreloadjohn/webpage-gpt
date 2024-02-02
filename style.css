@@ -33,7 +33,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('path-to-your-durian-image.jpg') no-repeat center center/cover;
+    background: url('https://cf-image-hosting.ifyour.workers.dev/file/722f35760751283846406.png') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
