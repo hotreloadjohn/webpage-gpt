@@ -238,7 +238,7 @@ article h3 {
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     .testimonial-container {
         flex-direction: column; /* Stack testimonials vertically */
         align-items: center; /* Center-align the testimonials for aesthetic balance */
