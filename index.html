@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Fruit Stall</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
   </head>
   <body>
     <!-- Header and Navigation -->
@@ -29,13 +25,72 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-content">
-        <h1>Discover the King of Fruits</h1>
-        <p>
-          Experience the unique taste and aroma of Durian, fresh from our
-          orchard to your doorstep.
-        </p>
+        <div class="hero-text">
+            <h1>Discover Fresh Assorted Fruits</h1>
+            <p>
+              Explore a world of flavors with our fresh, hand-picked assortment of
+              fruits, delivered directly from our orchard to your doorstep.
+            </p>
+        </div>
         <a href="#products" class="hero-btn">Shop Now</a>
       </div>
+    </section>
+
+    <!-- Product Display (Highlighting Durian) -->
+    <section id="products">
+      <h2>Featured Fruit: Durian</h2>
+      <p>The king of fruits, known for its distinct taste and aroma.</p>
+      <!-- Add more product details here -->
+      <div class="carousel">
+        <div class="carousel-inner" style="display: flex">
+          <img
+            src="https://cf-image-hosting.ifyour.workers.dev/file/722f35760751283846406.png"
+            alt="Durian 1"
+          />
+          <img
+            src="https://cf-image-hosting.ifyour.workers.dev/file/0f8d85300e7a114508461.png"
+            alt="Durian 2"
+          />
+          <img
+            src="https://cf-image-hosting.ifyour.workers.dev/file/722f35760751283846406.png"
+            alt="Durian 3"
+          />
+          <!-- Add more images as needed -->
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Absolutely love the freshness of the fruits delivered!"</p>
+                <p>- Jane Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"The variety and quality of fruits are unmatched. Highly recommend!"</p>
+                <p>- John Smith</p>
+            </div>
+            <div class="testimonial">
+                <p>"Exceptional service and the fruits always arrive in perfect condition."</p>
+                <p>- Emily Clark</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Fruit-Related Articles -->
+    <section id="articles">
+      <h2>Read Our Latest Fruit Articles</h2>
+      <article>
+        <h3>Health Benefits of Durian</h3>
+        <p>Discover the surprising health benefits of durian...</p>
+        <!-- Add more article details here -->
+      </article>
+      <!-- Add more articles here -->
     </section>
 
     <!-- Footer -->

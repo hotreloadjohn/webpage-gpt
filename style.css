@@ -32,15 +32,33 @@ header {
 }
 
 /* Hero Section */
+/* Hero Section with Background Opacity */
+.hero-text {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    margin-top: -10rem;
+    padding: 10rem 0;
+}
 .hero {
-    background: url('https://cf-image-hosting.ifyour.workers.dev/file/722f35760751283846406.png') no-repeat center center/cover;
-    height: 80vh;
+    position: relative;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
     padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://cf-image-hosting.ifyour.workers.dev/file/814c585c5255927a5b4d0.png') no-repeat center center/cover;
+    z-index: -1;
 }
 
 .hero-content h1, .hero-content p, .hero-btn {
@@ -59,6 +77,141 @@ header {
 .hero-btn:hover {
     background-color: #e68900;
 }
+
+/* Product Display Section */
+#products {
+    background-color: #ff9800;
+    padding: 20px;
+    text-align: center;
+}
+
+#products h2 {
+    color: #ff9800;
+}
+
+/* Customer Testimonials Section */
+#testimonials {
+    background-color: #ff9800;
+    padding: 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: #333; /* Dark text color for the heading */
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly around items */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+    gap: 20px; /* Space between testimonials */
+}
+
+.testimonial {
+    flex-basis: 30%; /* Each testimonial takes up roughly 30% of the container width */
+    background-color: white; /* White background for each testimonial */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.testimonial p {
+    margin: 10px 0;
+}
+
+.testimonial p:first-child {
+    font-style: italic; /* Italicize the testimonial text */
+}
+
+.testimonial p:last-child {
+    text-align: right;
+    color: #777; /* Lighter text color for the attribution */
+    font-weight: bold;
+}
+
+
+/* Fruit-Related Articles Section */
+#articles {
+    background-color: #ff9800;
+    padding: 20px;
+    text-align: left;
+}
+
+#articles h2 {
+    color: #ff9800;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    color: #333;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Responsive width */
+    max-width: 600px; /* Maximum width of the carousel */
+    margin: auto; /* Center the carousel */
+    height: auto; /* Adjust based on content */
+    max-height: 400px; /* Maximum height to control size */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the sliding effect */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ensure images fill the carousel */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without losing aspect ratio */
+    flex: 0 0 auto; /* Prevent images from stretching */
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; /* Ensure arrows are above the images */
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding for better visibility */
+    font-size: 24px; /* Increase font size for better visibility */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
