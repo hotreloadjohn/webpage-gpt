@@ -1,0 +1,86 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ff9800;
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('path-to-your-durian-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1, .hero-content p, .hero-btn {
+    margin-bottom: 1rem;
+}
+
+.hero-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #e68900;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        flex-direction: column;
+        background-color: #ff9800;
+        width: 100%;
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+}
+
+.nav-active {
+    display: flex;
+}
