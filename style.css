@@ -154,10 +154,9 @@ article h3 {
     overflow: hidden;
     position: relative;
     width: 100%; /* Responsive width */
-    max-width: 600px; /* Maximum width of the carousel */
     margin: auto; /* Center the carousel */
-    height: auto; /* Adjust based on content */
-    max-height: 400px; /* Maximum height to control size */
+    height: 100%; /* Adjust based on content */
+    max-height: 20rem;
 }
 
 .carousel-inner {
@@ -166,9 +165,9 @@ article h3 {
 }
 
 .carousel-inner img {
-    width: 100%; /* Ensure images fill the carousel */
+    width: 100%; /* Ensure images fill the width of the carousel */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without losing aspect ratio */
+    object-fit: contain; /* Ensure the whole image fits within the box without cropping */
     flex: 0 0 auto; /* Prevent images from stretching */
 }
 
@@ -237,6 +236,17 @@ article h3 {
 .nav-active {
     display: flex;
 }
+
+@media (max-width: 768px) {
+    .carousel {
+        max-height: 50vh; /* Adjust the height on smaller screens */
+    }
+    .carousel-inner img {
+        object-fit: scale-down; /* Optional, to ensure images scale down on smaller screens */
+    }
+}
+
+
 
 @media (max-width: 450px) {
     .testimonial-container {
